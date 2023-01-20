@@ -9,7 +9,7 @@ print("processing...")
     *** ORDERS ***
 
 '''
-Orders = pd.read_csv("../proyectoolist/datasets/olist_orders_dataset.csv")
+Orders = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_orders_dataset.csv")
 orders = Preprocesamiento(Orders)
 
 orders.reemplazar_fechas_nulas("order_purchase_timestamp", "order_approved_at")
@@ -32,7 +32,7 @@ orders.clean_to_csv("orders.csv")
     *** ORDER ITEMS ***
 
 '''
-Order_Items = pd.read_csv("../proyectoolist/datasets/olist_order_items_dataset.csv")
+Order_Items = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_order_items_dataset.csv")
 order_items = Preprocesamiento(Order_Items)
 
 order_items.clean_to_csv("order_items.csv")
@@ -43,7 +43,7 @@ order_items.clean_to_csv("order_items.csv")
 
 '''
 
-Sellers = pd.read_csv("../proyectoolist/datasets/olist_sellers_dataset.csv")
+Sellers = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_sellers_dataset.csv")
 sellers = Preprocesamiento(Sellers)
 
 sellers.clean_to_csv("sellers.csv")
@@ -54,7 +54,7 @@ sellers.clean_to_csv("sellers.csv")
     *** PRODUCTS ***
 
 '''
-Products = pd.read_csv("../proyectoolist/datasets/olist_products_dataset.csv")
+Products = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_products_dataset.csv")
 products = Preprocesamiento(Products)
 
 products.llenar_nulos()
@@ -68,7 +68,7 @@ products.clean_to_csv("products.csv")
     *** CLOSED DEALS ***
 
 '''
-Closed_Deals = pd.read_csv("../proyectoolist/datasets/olist_closed_deals_dataset.csv")
+Closed_Deals = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_closed_deals_dataset.csv")
 closed_deals = Preprocesamiento(Closed_Deals)
 closed_deals.cambio_tipo_fecha("won_date")
 closed_deals.reemplazo_str("business_segment")
@@ -81,7 +81,7 @@ closed_deals.clean_to_csv("closed_deals.csv")
     *** CUSTOMERS ***
 
 '''
-Customers = pd.read_csv("../proyectoolist/datasets/olist_customers_dataset.csv")
+Customers = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_customers_dataset.csv")
 customers = Preprocesamiento(Customers)
 customers.drop_columna("customer_unique_id")
 customers.clean_to_csv("customers.csv")
@@ -91,7 +91,7 @@ customers.clean_to_csv("customers.csv")
     *** PAYMENTS ***
 
 '''
-Payments = pd.read_csv("../proyectoolist/datasets/olist_order_payments_dataset.csv")
+Payments = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_order_payments_dataset.csv")
 payments = Preprocesamiento(Payments)
 payments.reemplazo_str_regex("payment_type")
 payments.clean_to_csv("payments.csv")
@@ -102,7 +102,7 @@ payments.clean_to_csv("payments.csv")
     *** CATEGORY NAME ***
 
 '''
-Category_Name = pd.read_csv("../proyectoolist/datasets/product_category_name_translation.csv")
+Category_Name = pd.read_csv("../Proyecto_Final_OLIST/datasets/product_category_name_translation.csv")
 category_name = Preprocesamiento(Category_Name)
 category_name.reemplazo_str_regex("product_category_name")
 category_name.reemplazo_str_regex("product_category_name_english")
@@ -115,7 +115,7 @@ category_name.clean_to_csv("category_name_translation.csv")
 
 '''
 
-Geolocation = pd.read_csv("../proyectoolist/datasets/olist_geolocation_dataset.csv")
+Geolocation = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_geolocation_dataset.csv")
 geolocation = Preprocesamiento(Geolocation)
 
 itabatã = Geolocation['geolocation_city'] == 'itabatan'
@@ -179,7 +179,7 @@ geolocation.clean_to_csv("geolocation.csv")
 
 '''
 
-Marketing = pd.read_csv("../proyectoolist/datasets/olist_marketing_qualified_leads_dataset.csv")
+Marketing = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_marketing_qualified_leads_dataset.csv")
 marketing = Preprocesamiento(Marketing)
 
 marketing.unificar_criterio('origin', 'unknown', 'other')
@@ -194,7 +194,7 @@ marketing.clean_to_csv('marketing.csv')
     *** REVIEWS ***
 
 '''
-Reviews = pd.read_csv("../proyectoolist/datasets/olist_order_reviews_dataset.csv")
+Reviews = pd.read_csv("../Proyecto_Final_OLIST/datasets/olist_order_reviews_dataset.csv")
 reviews = Preprocesamiento(Reviews)
 
 reviews.cambio_tipo_fecha('review_creation_date')
