@@ -9,12 +9,12 @@ services:
     ports:
       -"3306:3306"
     volumes:
-      -../Proyecto_Final_OLIST/api/db/universidad:/var/lib/mysql:rw
+      -../Proyecto_Final_OLIST/db/universidad:/var/lib/mysql:rw
   api:
     build: .
     command: uvicorn main:app --host 0.0.0.0 --port 8000
     volumes:
-      -../Proyecto_Final_OLIST/api:/app
+      -../Proyecto_Final_OLIST:/app
     ports:
       -"8000:8000"
     depends_on:
