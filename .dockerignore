@@ -1,0 +1,13 @@
+clean_datasets/
+datasets/
+EDA/
+src/
+documentacion.docx
+E-Commerce.md
+gantt.pdf
+inspector.ipynb
+pipeline.py
+Pipfile
+Pipfile.lock
+preprocesamiento.py
+README.md
