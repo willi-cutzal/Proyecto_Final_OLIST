@@ -42,7 +42,11 @@ class Preprocesamiento:
     DataFrame con la data limpia a un nuevo csv guardado en la carpeta 'clean_data'
     '''
     def clean_to_csv(self, csv):
+<<<<<<< HEAD
         self.data.to_csv(f"../proyectoolist/clean_datasets/{csv}", index=False)
+=======
+        self.data.to_csv(f"../Proyecto_Final_OLIST/clean_datasets/{csv}", index=False)
+>>>>>>> cb6f1f594834fad87333d2951b372292aeb952ca
 
 
     #kervin
